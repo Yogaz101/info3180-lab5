@@ -53,12 +53,6 @@ def login():
             else:
                 flash("Unsuccessful Login", "Unsuccesful")
     return render_template("login.html", form=form)
-            # get user id, load into session
-            login_user(user)
-
-            # remember to flash a message to the user
-            return redirect(url_for("home"))  # they should be redirected to a secure-page route instead
-    return render_template("login.html", form=form)
 
 
 # user_loader callback. This callback is used to reload the user object from
